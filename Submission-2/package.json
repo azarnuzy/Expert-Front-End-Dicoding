@@ -4,9 +4,10 @@
   "description": "Submission 2 expert front end dicoding",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
-  "author": "Muhammad Azar Nuzu",
+  "author": "Muhammad Azar Nuzy",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
