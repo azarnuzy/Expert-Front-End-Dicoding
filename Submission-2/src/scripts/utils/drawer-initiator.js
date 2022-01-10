@@ -6,7 +6,6 @@ const DrawerInitiator = {
 
     content.addEventListener('click', (event) => {
       this._closeDrawer(event, drawer);
-      console.log(event.target.innerHTML);
     });
   },
 

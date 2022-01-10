@@ -61,9 +61,17 @@
         font-size: 2em;
     }
 
+    .header__inner {
+        padding-left: 5vw;
+    }
+
     .nav__item {
         font-size: 1.5em;
     }  
+
+    .nav__list {
+        padding-right: 5vw;
+    }
 }
 
 @media screen and (min-width: 720px) {
