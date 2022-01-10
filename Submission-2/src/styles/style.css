@@ -91,7 +91,8 @@ body {
 .nav a {
     text-decoration: none;
     color: white;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     min-width: 44px;
     min-height: 44px;
 }
@@ -112,7 +113,7 @@ body {
         115deg,
         rgba(230, 230, 230, 0.8),
         rgba(177, 177, 177, 0.7)
-      ),url("../public/images/hero.jpg");
+      ),url("./images/hero1.jpg");
     background-position: center;
     background-color: green;
 }
