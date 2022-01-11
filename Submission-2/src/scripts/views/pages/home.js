@@ -35,7 +35,9 @@ const Home = {
       console.log(error);
       explore__content.style.display = 'block';
       loading.style.display = 'none';
-      listItems.innerHTML = err.message;
+      listItems.style.fontSize = '20px';
+      listItems.style.color = 'red';
+      listItems.innerHTML = `'${error.message}'`;
     }
   },
 };
