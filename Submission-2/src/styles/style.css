@@ -171,7 +171,7 @@ body {
     text-align: left;
     overflow: auto;
     display: grid;
-    gap: 10px;
+    gap: 15px;
 }
 
 .explore-item {
@@ -179,6 +179,17 @@ body {
     width: 100%;
     border-radius: 5px;
     overflow: hidden;
+    margin-bottom: 5px;
+    transition: transform .3s;
+}
+
+.explore-item:hover {
+    transform: scale(0.97);
+}
+
+.explore-item a {
+    text-decoration: none;
+    color: unset;
 }
 
 .explore-item__thumbnail {
