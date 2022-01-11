@@ -5,6 +5,7 @@ import '../styles/normalize.css';
 import '../styles/spinner.css';
 import '../styles/detail.css';
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 const app = new App({
   button: document.querySelector('#menu'),
@@ -12,10 +13,11 @@ const app = new App({
   content: document.querySelector('#main-content'),
 });
 
-window.addEventListener('hashchange', () => {
+window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('hashchange', () => {
   app.renderPage();
 });
