@@ -2,10 +2,7 @@ import RestaurantSource from '../../data/restaurant-resource';
 import UrlParser from '../../routes/url-parser';
 import exploreDetail from '../templates/detailExploreItem';
 import Spinner from '../templates/spinner';
-import {
-  createMovieDetailTemplate,
-  createLikeButtonTemplate,
-} from '../templates/liked-button';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
@@ -33,10 +30,10 @@ const Detail = {
       const detailData = await RestaurantSource.getRestaurantDetail(url.id);
       detailResto.innerHTML += exploreDetail(detailData.restaurant);
 
-      const likeButtonContainer = document.querySelector(
-        '#likeButtonContainer'
-      );
-      likeButtonContainer.innerHTML = createLikeButtonTemplate();
+      LikeButtonInitiator.init({
+        likeButtonContainer: document.querySelector('#likeButtonContainer'),
+        detailData,
+      });
 
       explore__content.style.display = 'block';
       loading.style.display = 'none';
