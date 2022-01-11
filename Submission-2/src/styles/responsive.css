@@ -38,6 +38,10 @@
         font-size: 2em;
         padding: 24px 5px;
     }
+
+    .explore-detail {
+        display: block !important;
+    }
 }
 
 
@@ -54,9 +58,15 @@
     .header__title {
         font-size: 2.3em;
     }
+
 }
 
 @media screen and (min-width: 720px) {
+    .explore-detail {
+        display: grid;
+        gap: 10px;
+    }
+    
     .header__title {
         font-size: 2em;
     }
@@ -71,6 +81,10 @@
 
     .nav__list {
         padding-right: 5vw;
+    }
+
+    .explore-detail {
+        grid-template-columns: 1fr 1fr;
     }
 }
 

@@ -3,6 +3,7 @@ import '../styles/style.css';
 import '../styles/responsive.css';
 import '../styles/normalize.css';
 import '../styles/spinner.css';
+import '../styles/detail.css';
 import App from './views/app';
 
 const app = new App({

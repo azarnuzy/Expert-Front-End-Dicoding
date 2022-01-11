@@ -22,9 +22,14 @@ const Detail = {
     const detailResto = document.querySelector('#detail-restaurant');
     const explore__content = document.querySelector('.explore__content');
 
+    explore__content.style.display = 'none';
+    loading.innerHTML = Spinner();
     try {
       const detailData = await RestaurantSource.getRestaurantDetail(url.id);
       detailResto.innerHTML += exploreDetail(detailData.restaurant);
+
+      explore__content.style.display = 'block';
+      loading.style.display = 'none';
     } catch (error) {
       console.log(error);
       explore__content.style.display = 'block';

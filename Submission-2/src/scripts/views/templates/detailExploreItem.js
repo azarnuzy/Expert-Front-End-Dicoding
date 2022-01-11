@@ -21,12 +21,13 @@ const exploreDetail = (resto) => `
           </li>
           <li><strong>Name : </strong>${resto.name}</li>
           <li><strong>Address : </strong>${resto.address}, ${resto.city}</li>
-          <li><strong>Rating : </strong>${resto.name}</li>
+          <li><strong>Rating : </strong>${resto.rating}</li>
           <li>${resto.description}</li>
         </ul>
+        <h3 class="detail-explore__title">Menu</h3>
         <div class="detail-explore__menu">
           <div class="detail-explore__menu-food">
-            <h3>Food</h3>
+            <h4>Food</h4>
             <ul>
               ${resto.menus.foods
                 .map(
@@ -38,7 +39,7 @@ const exploreDetail = (resto) => `
             <ul>
           </div>
           <div class="detail-explore__menu-drink">
-            <h3>Drink</h3>
+            <h4>Drink</h4>
             <ul>
               ${resto.menus.drinks
                 .map(
@@ -50,8 +51,8 @@ const exploreDetail = (resto) => `
             <ul>
           </div>
         </div>
+        <h3 class="detail-explore__title">Reviews</h3>
         <div class="detail-explore__review">
-          <h3>Reviews</h3>
           ${resto.customerReviews
             .map(
               (review) => `
@@ -66,6 +67,33 @@ const exploreDetail = (resto) => `
             )
             .join('')}
         </div>
+        <div class="form">
+        <form action="" autocomplete="on">
+          <div class="form-box">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              minlength="3"
+              placeholder="Your Name..."
+              required
+            />
+          </div>
+          <div class="form-box">
+            <label for="name" class="form-label">Review</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              minlength="3"
+              placeholder="Your Review..."
+              required
+            />
+          </div>
+          <button id="submit" type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
     </article>
     `;
 
