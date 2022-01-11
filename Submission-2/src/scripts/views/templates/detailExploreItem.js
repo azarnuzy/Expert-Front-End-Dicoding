@@ -67,33 +67,6 @@ const exploreDetail = (resto) => `
             )
             .join('')}
         </div>
-        <div class="form">
-        <form action="" autocomplete="on">
-          <div class="form-box">
-            <label for="name" class="form-label">Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              minlength="3"
-              placeholder="Your Name..."
-              required
-            />
-          </div>
-          <div class="form-box">
-            <label for="name" class="form-label">Review</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              minlength="3"
-              placeholder="Your Review..."
-              required
-            />
-          </div>
-          <button id="submit" type="submit" class="submit-btn">Submit</button>
-        </form>
-      </div>
     </article>
     `;
 

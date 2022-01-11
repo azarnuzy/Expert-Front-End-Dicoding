@@ -51,6 +51,8 @@
 .detail-explore__review {
     max-width: 100%;
     font-size: 1em;
+    grid-column-start: 1;
+    grid-column-end: 3;
     text-align: center;
 }
 
