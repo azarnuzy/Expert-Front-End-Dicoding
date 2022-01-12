@@ -10,7 +10,7 @@ const Detail = {
     <div class="container">
       <div id="loading"></div>
       <div class="like" id="likeButtonContainer"></div>
-      <div class="exploreContent">
+      <div class="explore__content">
         <h2 tabindex="0" class="main-content__title">Detail Restaurant</h2>
         <article id="detail-restaurant"></article>
       </div>
@@ -22,7 +22,7 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const loading = document.querySelector('#loading');
     const detailResto = document.querySelector('#detail-restaurant');
-    const exploreContent = document.querySelector('.exploreContent');
+    const exploreContent = document.querySelector('.explore__content');
 
     exploreContent.style.display = 'none';
     loading.innerHTML = Spinner();

@@ -12,9 +12,19 @@
         "sourceType": "module"
     },
     "rules": {
-    "no-console": "off",
-    "linebreak-style": "off",
-    "no-underscore-dangle": "off",
-    "operator-linebreak": "off"
+        "no-console": 0,
+        "import/no-extraneous-dependencies": 0,
+        "linebreak-style":0,
+        "no-underscore-dangle":"off",
+        "no-unused-vars":"off",
+        "no-plusplus":"off",
+        "radix":"off",
+        "no-restricted-syntax":"off",
+        "no-param-reassign":"off",
+        "no-restricted-globals":"off",
+        "no-undef":"off",
+        "no-prototype-builtins":"off",
+        "consistent-return":"off",
+        "import/prefer-default-export": "off"
     }
 }
