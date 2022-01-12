@@ -9,13 +9,14 @@ class Navbar extends HTMLElement {
         <h1 class="header__title" tabindex="0">Azar's Resto</h1>
       </div>
       <div class="hamburger-menu">
-        <a
-          id="menu"
+        <button
           class="hamburger-menu__icon"
-          tabindex="0"
-          aria-label="navigation-menu"
-          >☰</a
+          id ="menu"
+          aria-label="button menu dropdown on mobile"
+          type="button"
         >
+          <i class="fa fa-bars"></i>
+        </button>
       </div>
       <nav id="drawer" class="nav open">
         <ul class="nav__list">

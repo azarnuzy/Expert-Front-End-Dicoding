@@ -18,9 +18,9 @@ const Home = {
   async afterRender() {
     const loading = document.querySelector('#loading');
     const listItems = document.querySelector('#explore-items');
-    const explore__content = document.querySelector('.explore__content');
+    const exploreContent = document.querySelector('.explore__content');
 
-    explore__content.style.display = 'none';
+    exploreContent.style.display = 'none';
     loading.innerHTML = Spinner();
 
     try {
@@ -30,10 +30,10 @@ const Home = {
       });
 
       loading.style.display = 'none';
-      explore__content.style.display = 'block';
+      exploreContent.style.display = 'block';
     } catch (error) {
       console.log(error);
-      explore__content.style.display = 'block';
+      exploreContent.style.display = 'block';
       loading.style.display = 'none';
       listItems.style.fontSize = '20px';
       listItems.style.color = 'red';

@@ -15,7 +15,6 @@
     "no-console": "off",
     "linebreak-style": "off",
     "no-underscore-dangle": "off",
-    "operator-linebreak": "off",
-    "devDependencies": "false"
+    "operator-linebreak": "off"
     }
 }

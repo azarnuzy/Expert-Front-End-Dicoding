@@ -4,9 +4,11 @@ import restoItem from '../templates/explore-item';
 const Favorite = {
   async render() {
     return `
-          <h2 tabindex="0" class="favorite__title">Favorite Restaurant</h2>
-          <div id="favorite-items" class="explore-items"></div>
-          `;
+      <div class="explore__content">
+        <h2 tabindex="0" class="favorite__title">Favorite Restaurant</h2>
+        <div id="favorite-items" class="explore-items"></div>
+      </div>
+    `;
   },
 
   async afterRender() {

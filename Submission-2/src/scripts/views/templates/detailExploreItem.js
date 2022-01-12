@@ -1,3 +1,5 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable indent */
 import CONFIG from '../../globals/config';
 
 const exploreDetail = (resto) => ` 
@@ -11,7 +13,7 @@ const exploreDetail = (resto) => `
           />
         </div>
         <ul class="detail-explore__info">
-           <li>${resto.categories
+           <li tabindex="0">${resto.categories
              .map(
                (category) => `
                     <span class="category">${category.name}</span>
@@ -19,16 +21,18 @@ const exploreDetail = (resto) => `
              )
              .join('')}
           </li>
-          <li><strong>Name : </strong>${resto.name}</li>
-          <li><strong>Address : </strong>${resto.address}, ${resto.city}</li>
-          <li><strong>Rating : </strong>${resto.rating}</li>
-          <li>${resto.description}</li>
+          <li tabindex="0"><strong>Name : </strong>${resto.name}</li>
+          <li tabindex="0"><strong>Address : </strong>${resto.address}, ${
+  resto.city
+}</li>
+          <li tabindex="0"><strong>Rating : </strong>${resto.rating}</li>
+          <li tabindex="0">${resto.description}</li>
         </ul>
-        <h3 class="detail-explore__title">Menu</h3>
+        <h3 class="detail-explore__title" tabindex="0">Menu</h3>
         <div class="detail-explore__menu">
           <div class="detail-explore__menu-food">
-            <h4>Food</h4>
-            <ul>
+            <h4 tabindex="0">Food</h4>
+            <ul tabindex="0">
               ${resto.menus.foods
                 .map(
                   (food, i) => `
@@ -39,8 +43,8 @@ const exploreDetail = (resto) => `
             <ul>
           </div>
           <div class="detail-explore__menu-drink">
-            <h4>Drink</h4>
-            <ul>
+            <h4 tabindex="0">Drink</h4>
+            <ul tabindex="0">
               ${resto.menus.drinks
                 .map(
                   (drink, i) => `
@@ -51,12 +55,12 @@ const exploreDetail = (resto) => `
             <ul>
           </div>
         </div>
-        <h3 class="detail-explore__title">Reviews</h3>
+        <h3 class="detail-explore__title" tabindex="0">Reviews</h3>
         <div class="detail-explore__review">
           ${resto.customerReviews
             .map(
               (review) => `
-                <div class="detail-explore__review-item">
+                <div class="detail-explore__review-item" tabindex="0">
                   <div class="detail-explore__review-header">
                     <p class="detail-explore__review-name">${review.name}</p>
                     <p class="detail-explore__review-date">${review.date}</p>

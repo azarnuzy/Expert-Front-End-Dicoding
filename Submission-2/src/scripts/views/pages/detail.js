@@ -10,7 +10,7 @@ const Detail = {
     <div class="container">
       <div id="loading"></div>
       <div class="like" id="likeButtonContainer"></div>
-      <div class="explore__content">
+      <div class="exploreContent">
         <h2 tabindex="0" class="main-content__title">Detail Restaurant</h2>
         <article id="detail-restaurant"></article>
       </div>
@@ -22,9 +22,9 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const loading = document.querySelector('#loading');
     const detailResto = document.querySelector('#detail-restaurant');
-    const explore__content = document.querySelector('.explore__content');
+    const exploreContent = document.querySelector('.exploreContent');
 
-    explore__content.style.display = 'none';
+    exploreContent.style.display = 'none';
     loading.innerHTML = Spinner();
     try {
       const detailData = await RestaurantSource.getRestaurantDetail(url.id);
@@ -35,11 +35,11 @@ const Detail = {
         detailData,
       });
 
-      explore__content.style.display = 'block';
+      exploreContent.style.display = 'block';
       loading.style.display = 'none';
     } catch (error) {
       console.log(error);
-      explore__content.style.display = 'block';
+      exploreContent.style.display = 'block';
       loading.style.display = 'none';
       detailResto.style.fontSize = '20px';
       detailResto.style.color = 'red';

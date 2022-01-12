@@ -24,7 +24,14 @@
         margin-right: 4vw;
     }
 
-    .hamburger-menu a {
+    .hamburger-menu__icon {
+        background-color: unset;
+        border:0;
+        color: white;
+        cursor: pointer;
+    }
+
+    .hamburger-menu i {
         font-size: 44px;
         min-width: 44px;
         min-height: 44px;
