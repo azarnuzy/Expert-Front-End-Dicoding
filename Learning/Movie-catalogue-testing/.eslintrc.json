@@ -27,7 +27,9 @@
         "no-prototype-builtins":"off",
         "consistent-return":"off",
         "import/prefer-default-export": "off",
-        "comma-dangle": "off"
+        "comma-dangle": "off",
+        "no-return-assign": 0,
+        "class-methods-use-this": 0
     },
     "plugins": ["jasmine"]
 }
