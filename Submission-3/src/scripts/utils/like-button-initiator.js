@@ -17,10 +17,7 @@ const LikeButtonInitiator = {
     try {
       const { id } = this._restaurant;
 
-      // get resto in indexed db
-      const restaurant = await FavoriteRestaurantIdb.getRestaurant(id);
-
-      if (restaurant) {
+      if (await this._isRestaurantExist(id)) {
         this._renderLikedButtonTemplate();
       } else {
         this._renderLikeButtonTemplate();
@@ -33,13 +30,17 @@ const LikeButtonInitiator = {
     }
   },
 
+  async _isRestaurantExist(id) {
+    const restaurant = await this._favoriteRestaurant.getRestaurantList(id);
+    return !!restaurant;
+  },
+
   _renderLikeButtonTemplate() {
-    this._likeButtonContainer.innerHTML = createLikeButtonTemplate(); // append html
+    this._likeButtonContainer.innerHTML = createLikeButtonTemplate();
 
     const likeButton = document.querySelector('#likeButton');
 
     likeButton.addEventListener('click', async () => {
-      // onClick fav the selected resto
       await FavoriteRestaurantIdb.putRestaurant(this._restaurant);
       initSwalSuccess('Resto favorited!');
       this._renderButton();
@@ -47,12 +48,11 @@ const LikeButtonInitiator = {
   },
 
   _renderLikedButtonTemplate() {
-    this._likeButtonContainer.innerHTML = createLikedButtonTemplate(); // append html
+    this._likeButtonContainer.innerHTML = createLikedButtonTemplate();
 
     const likeButton = document.querySelector('#likeButton');
 
     likeButton.addEventListener('click', async () => {
-      // onClick unfav the selected resto
       await FavoriteRestaurantIdb.deleteRestaurant(this._restaurant.id);
       initSwalSuccess('Resto unfavorited!');
       this._renderButton();
