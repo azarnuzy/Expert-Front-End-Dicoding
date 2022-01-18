@@ -1,4 +1,3 @@
-import FavoriteRestaurantIdb from '../data/favoriterestaurant-idb';
 import {
   createLikeRestoButtonTemplate,
   createUnlikeRestoButtonTemplate,
@@ -42,7 +41,7 @@ const LikeButtonPresenter = {
     const likeButton = document.querySelector('#likeButton');
 
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestaurantIdb.putRestaurant(this._restaurant);
+      await this._favoriteRestaurant.putRestaurant(this._restaurant);
       initSwalSuccess('Resto favorited!');
       this._renderButton();
     });
@@ -54,7 +53,7 @@ const LikeButtonPresenter = {
     const likeButton = document.querySelector('#likeButton');
 
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestaurantIdb.deleteRestaurant(this._restaurant.id);
+      await this._favoriteRestaurant.deleteRestaurant(this._restaurant.id);
       initSwalSuccess('Resto unfavorited!');
       this._renderButton();
     });
