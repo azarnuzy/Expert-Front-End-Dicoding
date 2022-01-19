@@ -6,7 +6,7 @@ const restoItem = (resto) => `
         <div class="img-container">
           <img
             class="explore-item__thumbnail lazyload"
-            src="./images/noPhoto.png"
+            src="./images/noPhoto-xl.jpg"
             data-src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}"
             alt="${resto.name}"
             tabindex="0"
